@@ -314,7 +314,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--pretrain_ckpt",
         type=str,
-        default=".",
+        default="path/to/pretrain_ckpt",
     )
     parser.add_argument(
         "--seed",

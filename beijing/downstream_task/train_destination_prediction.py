@@ -307,8 +307,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--pretrain_ckpt",
         type=str,
-        default=".",
-        help="Path to backbone pretrain checkpoint",
+        default="path/to/pretrain_ckpt",
     )
     parser.add_argument(
         "--seed",
