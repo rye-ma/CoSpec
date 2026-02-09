@@ -1,0 +1,28 @@
+seed: 42
+device: 0
+
+dest_train:
+  batch_size: 512
+  epochs: 500
+  lr: 1.0e-4
+  weight_decay: 0.0e-5
+  clip: 0.1
+
+dest_model:
+  hidden_dim: 512
+  num_layers: 2
+  dropout: 0.6
+  freeze_backbone: false
+exp_root: "./beijing/runs/destination_prediction"
+
+cities:
+  bj:
+    train_des_set: "./data/bj/train_des_set"
+    test_des_set: "./data/bj/test_des_set"
+    num_segments: 16000
+
+    input_len: 5
+    train_min_len: 6
+    train_max_len: 12
+    test_min_len: 6
+    test_max_len: 10

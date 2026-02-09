@@ -1,0 +1,23 @@
+seed: 0
+device: 2
+
+label_train:
+  batch_size: 128
+  epochs: 200
+  lr: 5.0e-4
+  weight_decay: 1.0e-5
+
+label_model:
+  hidden_dim: 608
+  num_classes: 2
+  num_layers: 2
+  dropout: 0.8
+  freeze_backbone: false
+
+exp_root: "./xian/runs/label_prediction"
+
+cities:
+  xa:
+    train_pred_train_set: "./data/xa/label_pred_train_set"
+    train_pred_train_set_false: "./data/xa/label_pred_train_set_false"
+    num_segments: 4000

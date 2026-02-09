@@ -1,0 +1,29 @@
+seed: 42
+device: 2
+
+route_train:
+  batch_size: 512
+  epochs: 500
+  lr: 1.0e-3
+  weight_decay: 1.0e-5
+  clip: 0.1
+
+route_model:
+  hidden_dim: 608
+  num_layers: 2
+  dropout: 0.6
+  freeze_backbone: true
+
+exp_root: "./chengdu/runs/route_plan"
+
+cities:
+  cd:
+    train_route_set: "./data/cd/train_route_set"
+    test_route_set: "./data/cd/test_route_set"
+    num_segments: 3000
+
+    train_min_len: 4
+    train_max_len: 10000
+    test_min_len: 15
+    test_max_len: 10000
+

@@ -1,0 +1,28 @@
+seed: 42
+device: 2
+
+next_train:
+  batch_size: 512
+  epochs: 500
+  lr: 5.0e-5
+  weight_decay: 1.0e-5
+  clip: 0.1
+
+next_model:
+  hidden_dim: 512
+  num_layers: 1
+  dropout: 0.6
+  freeze_backbone: false
+
+exp_root: "./beijing/runs/next_location_prediction"
+
+cities:
+  bj:
+    train_loc_set: "./data/bj/train_loc_set" 
+    test_loc_set: "./data/bj/test_loc_set"
+    num_segments: 16000
+
+    train_min_len: 4
+    train_max_len: 10000
+    test_min_len: 4
+    test_max_len: 10000

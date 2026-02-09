@@ -1,0 +1,23 @@
+seed: 0
+device: 2
+
+label_train:
+  batch_size: 512
+  epochs: 200
+  lr: 1.0e-4
+  weight_decay: 1.0e-5
+
+label_model:
+  hidden_dim: 608
+  num_classes: 2
+  num_layers: 2
+  dropout: 0.6
+  freeze_backbone: false
+
+exp_root: "./chengdu/runs/label_prediction"
+
+cities:
+  cd:
+    train_pred_train_set: "./data/cd/label_pred_train_set"
+    train_pred_train_set_false: "./data/cd/label_pred_train_set_false"
+    num_segments: 3000

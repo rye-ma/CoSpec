@@ -1,0 +1,40 @@
+device: 2
+
+model:
+  hidden_dims: 608
+  region_num: 200
+  cap_rank: 8
+  cap_use_adapter: true
+  prototype_k: 100
+  gcn_layers: 2
+  gcn_dropout: 0.5
+  segment_id_dims: 32
+  segment_lane_dims: 32
+  segment_type_dims: 32
+  segment_length_dims: 32
+  segment_id_num: 20000
+  segment_lane_num: 50
+  segment_type_num: 50
+  segment_length_num: 500
+
+cities:
+  bj:
+    num_segments: 16000
+  cd:
+    num_segments: 3000
+  xa:
+    num_segments: 4000
+
+train:
+  lr: 1.0e-3
+  weight_decay: 1.0e-5
+  batch_size: 1
+  epochs: 500
+
+loss_weights:
+  lambda_cons: 1
+  lambda_rec: 1
+  lambda_ortho: 1
+  lambda_smooth: 1
+
+exp_root: "./pretrain/runs"

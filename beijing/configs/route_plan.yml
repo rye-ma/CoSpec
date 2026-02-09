@@ -1,0 +1,28 @@
+seed: 0
+device: 2
+
+route_train:
+  batch_size: 256
+  epochs: 200
+  lr: 1.0e-4
+  weight_decay: 1.0e-5
+  clip: 0.1
+
+route_model:
+  hidden_dim: 608
+  num_layers: 1
+  dropout: 0.6
+  freeze_backbone: false
+
+exp_root: "./beijing/runs/route_plan"
+
+cities:
+  bj:
+    train_route_set: "./data/bj/train_route_set"
+    test_route_set: "./data/bj/test_route_set"
+    num_segments: 16000
+
+    train_min_len: 4
+    train_max_len: 10000
+    test_min_len: 15
+    test_max_len: 10000
