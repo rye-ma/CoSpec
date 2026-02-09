@@ -314,7 +314,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--pretrain_ckpt",
         type=str,
-        default="./pretrain/runs/repr_20251203_145530/checkpoints/repr_best.pt",
+        default=".",
     )
     parser.add_argument(
         "--seed",
