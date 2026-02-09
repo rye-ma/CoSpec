@@ -1,5 +1,5 @@
 seed: 42
-device: 1
+device: 0
 
 next_train:
   batch_size: 512

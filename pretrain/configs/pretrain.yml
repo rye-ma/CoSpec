@@ -1,4 +1,4 @@
-device: 2
+device: 0
 
 model:
   hidden_dims: 608
